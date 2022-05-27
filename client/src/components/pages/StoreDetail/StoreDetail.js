@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SHOP_IMAGE_URL } from '../../Config';
 import MainImage from '../Store/Sections/MainImage'
-import { useParams, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Auth from '../../../hoc/auth';
 import './StoreDetail.css'
 
