@@ -1,22 +1,22 @@
 
 
 import React, { useEffect, useState } from 'react'
-import { API_URL, API_KEY, MAIN_IMAGE_URL, SHOP_IMAGE_URL } from '../../Config';
-import MainImage from '../Store/Sections/MainImage'
-import { useParams, useNavigate, useLocation } from 'react-router-dom'
-import W_GridCards from '../Wtg/W_GridCards';
-import { Row } from 'antd';
+
+
+import { useParams,useLocation } from 'react-router-dom'
+
+
 import Auth from '../../../hoc/auth';
 import './WtgDetail.css';
 
 
 function WtgDetail(props) {
 
-    const { gongId } = useParams();
+    
     const { state } = useLocation();
   
     const [gongData, setGongData] = useState([])
-    const [MainShopImage, setMainShopImage] = useState(null)
+    
    
 
     useEffect(() => {
@@ -25,7 +25,7 @@ function WtgDetail(props) {
         setGongData(state);
 
 
-    }, [])
+    }, [state])
 
 
 
@@ -58,7 +58,7 @@ function WtgDetail(props) {
             <>
               <div align="center" style={{ width: '100%', margin: '0' }}>
 
-                <img src={gongData.IMGURL} />
+                <img src={gongData.IMGURL} alt="gongImg" />
                 
               </div>
               <br></br>

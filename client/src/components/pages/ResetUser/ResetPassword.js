@@ -63,7 +63,7 @@ function ResetPassword() {
             // ...
         }
         fetchData();
-    }, []);
+    });
 
     if (IsValid) {
         return (

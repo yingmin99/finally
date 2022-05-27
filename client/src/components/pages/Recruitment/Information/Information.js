@@ -21,9 +21,9 @@ function Information() {
     // 잡코리아 : https://www.jobkorea.co.kr/Search/ 
     //?stext=소프트웨어%20개발자&local=I000&payType=1&payMin=3000
 
-    const [Career, setCareer] = useState(location.search);
-    const [Location, setLocation] = useState('');
-    const [Salary, setSalary] = useState('');
+    const [Career] = useState(location.search);
+    const [Location] = useState('');
+    const [Salary] = useState('');
 
     const [SaraminData, setSaraminData] = useState([]);
     const [JobkoreaData, setJobkoreaData] = useState([]);
@@ -44,7 +44,7 @@ function Information() {
                 })
         }
         fetchSaraminData(dataToSubmit);
-    }, [Career, Location, Salary]);
+    }, [dispatch,Career, Location, Salary]);
 
     useEffect(() => {
         let arr = Career.split('=');
@@ -63,7 +63,7 @@ function Information() {
                 })
         }
         fetchJobkoreaData(dataToSubmit);
-    }, [Career, Location, Salary]);
+    }, [dispatch,Career, Location, Salary]);
 
     const renderSarmainData = SaraminData.map((item, index) => {
         return <tr key={index}>

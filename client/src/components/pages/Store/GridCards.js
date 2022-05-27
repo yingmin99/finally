@@ -1,7 +1,6 @@
 import React from 'react'
 import { Col } from 'antd';
 import './GridCards.css';
-import StoreDetail from '../StoreDetail/StoreDetail';
 import {Link} from 'react-router-dom';
 
 function GridCards(props) {

@@ -39,7 +39,7 @@ function Detail() {
       .catch((err) => {
         console.log(err);
       });
-  }, [params.postNum]);
+  }, [params.postNum,setFlag]);
 
   const Delete = () => {
     if (window.confirm("정말로 삭제하시겠습니까?")) {

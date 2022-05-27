@@ -10,7 +10,7 @@ function Edit() {
 
   const [Content, setContent] = useState("");
   const [Title, setTitle] = useState("");
-  const [PostInfo, setPostInfo] = useState({}); // Object type
+  const [setPostInfo] = useState({}); // Object type
   const [Image, setImage] = useState("");
   const [Flag, setFlag] = useState(false);
 
@@ -35,7 +35,7 @@ function Edit() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [params.postNum,setPostInfo]);
 
   //글 번호에 해당하는 정보로 수정폼 채워넣기
   // useEffect(() => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 
 
 
@@ -7,7 +7,7 @@ function CardItem1(props) {
     return (
         <>
             <li className='cards__item'>
-            <a target="_blank" href="https://youth.seoul.go.kr/site/main/archive/space/youth_space">
+            <a target="_blank" rel="noopener noreferrer" href="https://youth.seoul.go.kr/site/main/archive/space/youth_space">
                     <figure className='cards__item__pic-wrap' data-category={props.label}>
                         <img
                             src={props.src}

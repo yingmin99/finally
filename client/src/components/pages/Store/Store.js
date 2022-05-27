@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import '../../App.css';
-import Store_Cards from '../commons/Cards/Store_Cards';
+import StoreCards from '../commons/Cards/Store_Cards';
 
 import MainImage from './Sections/MainImage';
-import { API_URL, API_KEY, MAIN_IMAGE_URL, SHOP_IMAGE_URL } from '../../Config';
+import { MAIN_IMAGE_URL } from '../../Config';
 import GridCards from './GridCards';
 import { Row } from 'antd';
 
@@ -12,7 +12,7 @@ export default function Store() {
 
   const [shopdata, setShopdata] = useState([])
   const [MainShopImage, setMainShopImage] = useState(null)
-  const [CurrentPage, setCurrentPage] = useState(0)
+  //const [CurrentPage, setCurrentPage] = useState(0)
 
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function Store() {
         />
       }
 
-    { shopdata && <Store_Cards shopdata={shopdata}/>}
+    { shopdata && <StoreCards shopdata={shopdata}/>}
 
       <div style={{ width: '85%', margin: '1rem auto' }}>
 

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { API_URL, API_KEY, MAIN_IMAGE_URL, SHOP_IMAGE_URL } from '../../Config';
+import { SHOP_IMAGE_URL } from '../../Config';
 import MainImage from '../Store/Sections/MainImage'
-import { useParams, useNavigate, useLocation } from 'react-router-dom'
-import GridCards from '../Store/GridCards';
-import { Row } from 'antd';
+import { useParams, useLocation } from 'react-router-dom'
 import Auth from '../../../hoc/auth';
 import './StoreDetail.css'
 
@@ -11,12 +9,10 @@ function StoreDetail(props) {
 
 
   // let shopId = props.match.params.shopId
-  const { shopId } = useParams();
   const { state } = useLocation();
 
   const [shopData, setShopData] = useState([])
-  const [MainShopImage, setMainShopImage] = useState(null)
-  const [CurrentPage, setCurrentPage] = useState(0)
+  const [MainShopImage] = useState(null)
 
 
   useEffect(() => {
@@ -38,7 +34,7 @@ function StoreDetail(props) {
     //   })
 
 
-  }, [])
+  }, [state])
 
 
 
@@ -71,7 +67,7 @@ function StoreDetail(props) {
             <>
               <div align="center" style={{ width: '100%', margin: '0' }}>
 
-                <img src={shopData.SH_PHOTO} />
+                <img src={shopData.SH_PHOTO} alt="storeimg" />
                 
               </div>
               <br></br>

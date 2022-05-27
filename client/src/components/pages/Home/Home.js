@@ -1,7 +1,7 @@
 import '../../App.css';
 import HeroSection from '../HeroSection/HeroSection';
 import Cards from '../commons/Cards/Cards';
-import React, { useState } from 'react';
+import React from 'react';
 import Auth from '../../../hoc/auth';
 
 

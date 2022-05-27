@@ -1,11 +1,11 @@
 
 import React, { useEffect, useState } from "react";
 import '../../App.css';
-import Wtg_Cards from '../commons/Cards/Wtg_Cards';
-import W_MainImage from './Sections/W_MainImage';
-import W_GridCards from './W_GridCards';
+import WtgCards from '../commons/Cards/Wtg_Cards';
+import WMainImage from './Sections/W_MainImage';
+import WGridCards from './W_GridCards';
 
-import { API_URL, API_KEY, MAIN_IMAGE_URL, WTG_MAIN_IMAGE_URL, SHOP_IMAGE_URL } from '../../Config';
+import { WTG_MAIN_IMAGE_URL } from '../../Config';
 
 import { Row } from 'antd';
 
@@ -65,13 +65,13 @@ console.log(endpoint)
 
         <div style={{ width: '100%', margin: '0' }}>
             {MainShopImage &&
-                <W_MainImage
+                <WMainImage
                     image={`${WTG_MAIN_IMAGE_URL}`}
 
                 />
             }
 
-            {gongdata && <Wtg_Cards gongdata={gongdata} />}
+            {gongdata && <WtgCards gongdata={gongdata} />}
 
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
@@ -104,7 +104,7 @@ console.log(endpoint)
                     {gongdata && gongdata.map((gong, index) => (
                         //console.log('line 109 shop : ' + JSON.stringify(shop)),
                         <React.Fragment key={index}>
-                            <W_GridCards
+                            <WGridCards
                                 // image={shop.SH_PHOTO ?
                                 //   `${SHOP_IMAGE_URL}w500${shop.SH_PHOTO}` : null}
                                 // image={`${SHOP_IMAGE_URL}`}
